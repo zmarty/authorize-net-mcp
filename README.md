@@ -1,5 +1,3 @@
----
-
 # authorize-net-mcp
 
 This project is a **Model Context Protocol (MCP) server** that integrates with the [Authorize.net Node SDK](https://github.com/AuthorizeNet/sample-code-node) to provide two primary payment operations:
@@ -8,8 +6,6 @@ This project is a **Model Context Protocol (MCP) server** that integrates with t
 2. **`createInvoice`** – Generate a hosted payment page (invoice) for customers to pay online.
 
 By exposing these operations as **MCP tools**, AI agents and other platforms using the [MCP Node SDK](https://github.com/modelcontextprotocol/typescript-sdk) can seamlessly call Authorize.net functionality without directly handling credit card or transaction logic themselves.
-
----
 
 ## What Is the Model Context Protocol (MCP)?
 
