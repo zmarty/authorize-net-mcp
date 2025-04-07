@@ -1,5 +1,3 @@
-Below is an example of a more in-depth `README.md` that explains what an MCP server is, how this project uses the MCP Node SDK, and how it integrates with the Authorize.net Node SDK to expose payment-related APIs as MCP tools.
-
 ---
 
 # authorize-net-mcp
