@@ -1,0 +1,28 @@
+{
+  "name": "authorize-net-mcp",
+  "version": "0.1.0",
+  "description": "MCP server exposing Authorize.net payment APIs",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "authorize-net-mcp": "./build/index.js"
+  },
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', 0o755)\"",
+    "watch": "tsc --watch",
+    "start": "node build/index.js"
+  },
+  "files": [
+    "build"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.8.0",
+    "authorizenet": "^1.0.2",
+    "zod": "^3.22.2"
+  },
+  "devDependencies": {
+    "@types/node": "^18.17.0",
+    "@types/authorizenet": "^1.0.2",
+    "typescript": "^5.2.2"
+  }
+}
