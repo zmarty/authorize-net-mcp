@@ -178,4 +178,4 @@ Within an MCP-compatible environment (e.g., an AI chat that supports MCP), the w
 
 ### License
 
-This project is released under the MIT License (or your preferred license). Please see the repository’s [LICENSE](LICENSE) file for details.
+This project is released under the MIT License. Please see the repository's [LICENSE](LICENSE) file for details.
