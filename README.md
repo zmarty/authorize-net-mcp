@@ -75,6 +75,7 @@ You must provide your Authorize.net API credentials. For testing, you can use [A
 
 - `AUTHORIZE_NET_API_LOGIN_ID`  
 - `AUTHORIZE_NET_TRANSACTION_KEY`
+- `AUTHORIZE_NET_SANDBOX` (optional, set to "true" for sandbox mode)
 
 Set them before you build or start the server:
 
@@ -82,19 +83,44 @@ Set them before you build or start the server:
 ```bash
 export AUTHORIZE_NET_API_LOGIN_ID="YOUR_SANDBOX_LOGIN_ID"
 export AUTHORIZE_NET_TRANSACTION_KEY="YOUR_SANDBOX_TRANSACTION_KEY"
+export AUTHORIZE_NET_SANDBOX="true"
 ```
 
 #### For Windows (Command Prompt):
 ```cmd
 set AUTHORIZE_NET_API_LOGIN_ID=YOUR_SANDBOX_LOGIN_ID
 set AUTHORIZE_NET_TRANSACTION_KEY=YOUR_SANDBOX_TRANSACTION_KEY
+set AUTHORIZE_NET_SANDBOX=true
 ```
 
 #### For Windows (PowerShell):
 ```powershell
 $env:AUTHORIZE_NET_API_LOGIN_ID="YOUR_SANDBOX_LOGIN_ID"
 $env:AUTHORIZE_NET_TRANSACTION_KEY="YOUR_SANDBOX_TRANSACTION_KEY"
+$env:AUTHORIZE_NET_SANDBOX="true"
 ```
+
+#### For Claude Desktop:
+You can configure this MCP server in the Claude Desktop settings by adding this to your `config.json`:
+
+```json
+{
+  "mcpServers": {
+    "authorize-net-mcp": {
+      "command": "node",
+      "args": ["C:\\git\\authorize-net-mcp\\build\\index.js"],
+      "env": {
+        "DEBUG": "*",
+        "AUTHORIZE_NET_API_LOGIN_ID": "YOUR-LOGIN-ID-HERE",
+        "AUTHORIZE_NET_TRANSACTION_KEY": "YOUR-KEY-HERE",
+        "AUTHORIZE_NET_SANDBOX": "true"
+      }
+    }
+  }
+}
+```
+
+Make sure to replace the placeholder values with your actual Authorize.net credentials.
 
 ### 3. Build and Run
 
